@@ -16,21 +16,32 @@ All requests are passed to a controller which forks these out to a service conta
 Before building make sure you have [maven](http://maven.apache.org) installed. Clone the project and follow either option below.
 
 ```bash
-git clone
-
+git clone https://github.com/emmahastings/market_trade_processor.git
+cd market_trade_processor/
 mvn spring-boot:run
 ```
 
 In addition you can build a jar file
 
 ```bash
-
+git clone https://github.com/emmahastings/market_trade_processor.git
+cd market_trade_processor/
+java -jar target/market_trade_processor-1.0.0.jar
 ```
+Application will be available at http://localhost:8080/
 
 ### Usage
 
 ```bash
 curl -H "Content-Type: application/json" -X POST -d '{"userId": "134256", "currencyFrom": "EUR", "currencyTo": "GBP","amountSell": 1000, "amountBuy":747.10, "rate": 0.7471, "timePlaced" : "24-JAN-18 10:27:44", "originatingCountry" : "FR"}' localhost:8080
+```
+### Testing this Project
+
+To run all tests use ...
+```bash
+git clone https://github.com/emmahastings/market_trade_processor.git
+cd market_trade_processor/
+mvn test
 ```
 
 ### Authors and Contributors
